@@ -465,7 +465,8 @@ dffull=data.frame(
 
 #Plot the locations: blue is t=0, and magenta is t=1
 colkrig=c(rep(6,4),rep(5,4),6,6,5,5)
-scatterplot3d(dffull[,1:3],color=colkrig,pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
+col2=c(rep(6,8),rep(5,4))
+scatterplot3d(dffull[,1:3],color=col2,pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
 
 dffull.parent=data.frame(
   'xco'=c(0,1,0,1,0,1,0,1,0,1,0,1),
@@ -475,8 +476,8 @@ dffull.parent=data.frame(
 )
 
 par(mfrow=c(1,2))
-scatterplot3d(dffull[,c(1,2,4)],color=colkrig,type='h',pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
-scatterplot3d(dffull.parent[,c(1,2,4)],color=colkrig,type='h',pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
+scatterplot3d(dffull[,c(1,2,4)],color=colkrig+2,type='h',pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
+scatterplot3d(dffull.parent[,c(1,2,4)],color=colkrig+2,type='h',pch=c(1,1,1,1,19,19,19,19,1,1,19,19))
 par(mfrow=c(1,1)) #Compares the predictions of the two cases
 
 #Prepare the standard persp plots
